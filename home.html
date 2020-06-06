@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<title>wildfire</title>
+
+		<!-- Bootstrap -->
+		
+		
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font-family: 'Roboto', sans-serif;
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 1.25;
+			}
+			/*********** Navbar Section Start ***********/
+			.navbar-inverse {
+				background-image: -webkit-linear-gradient(bottom left, rgba(100, 121, 916, 0.9), rgba(34, 139, 34, 0.8));
+				background-image: -o-linear-gradient(bottom left, rgba(100, 121, 916, 0.9), rgba(34, 139, 34, 0.8));
+				background-image: linear-gradient(to top right, rgba(100, 121, 916, 0.9), rgba(34, 139, 34, 0.8));
+			}
+
+			.navbar-inverse .navbar-nav>li>a {
+				color: white;
+				font-size: 15px;
+				text-transform: uppercase;
+			}
+
+			.navbar-inverse .navbar-brand {
+				color: white;
+				font-size: 30px;
+			}
+
+			.navbar-inverse ul li:hover {
+				background: rgba(205, 98, 85, 0.8);
+				color: white;
+			}
+			.active1{
+			background: linear-gradient(to right top, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+		}
+			/************ Navbar Section End *************/
+			/************ Header Section Start ************/
+			.header {
+				height: 100vh;
+				background-image: linear-gradient( to right bottom, rgba(63, 10, 161, 0.8), rgba(139, 0, 0, 0.8)), url('images/wildfire/firey1.jpg');
+				background-size: cover;
+				background-position: top;
+				position: relative;
+			}
+
+			.text-box {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+			}
+
+			.heading-primary {
+				color: #fff;
+				text-transform: uppercase;
+				backface-visibility: hidden;
+				margin-bottom: 60px;
+			}
+
+			.heading-primary-main {
+				display: block;
+				font-size: 45px;
+				font-weight: 400;
+				letter-spacing: 8px;
+				animation-name: moveInLeft;
+				animation-duration: 1s;
+				animation-timing-function: ease-out;
+			}
+
+			.heading-primary-sub {
+				display: block;
+				font-size: 20px;
+				font-weight: 700;
+				letter-spacing: 1px;
+				padding-top: 20px;
+				animation: moveInRight 1s ease-out;
+			}
+
+			@keyframes moveInLeft {
+				0% {
+					opacity: 0;
+					transform: translateX(-100px);
+				}
+				80% {
+					transform: translateX(10px);
+				}
+				100% {
+					opacity: 1;
+					transform: translate(0);
+				}
+			}
+
+			@keyframes moveInRight {
+				0% {
+					opacity: 0;
+					transform: translateX(100px);
+				}
+				80% {
+					transform: translateX(-10px);
+				}
+				100% {
+					opacity: 1;
+					transform: translate(0);
+				}
+			}
+
+			@keyframes moveInBottom {
+				0% {
+					opacity: 0;
+					transform: translateY(30px);
+				}
+				100% {
+					opacity: 1;
+					transform: translate(0);
+				}
+			}
+			/************** Header Section End **********/
+			/*********** About Me Section Start ********/
+
+			#about {
+				padding-top: 80px;
+				padding-bottom: 80px;
+				color: #5a5a5a;
+				background-image: linear-gradient( to left top, rgba(63, 10, 161, 0.8), rgba(139, 0, 0, 0.8)), url(https://images.unsplash.com/photo-1467703834117-04386e3dadd8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2de85761d45711c4109ba4f215b6e21e&auto=format&fit=crop&w=1350&q=80);
+				background-size: cover;
+				background-position: center;
+				color: #fff;
+			}
+
+			.featurette-heading {
+				font-weight: 300;
+				line-height: 1;
+				letter-spacing: -1px;
+			}
+			
+			@font-face {
+  			  font-family: 'Anonymous Pro';
+			  font-style: normal;
+			  font-weight: 100;
+			  src: local('Anonymous Pro Regular'), local('AnonymousPro-Regular'), url('font/font1.woff') format('woff');
+}
+			.text1 {
+				position: relative;
+				top: 50%;  
+				width: 22ch;
+				margin: 0 auto;
+				border-right: 2px solid rgba(255,255,255,.75);
+				font-size: 180%;
+				text-align: center;
+				white-space: nowrap;
+				overflow: hidden;
+				transform: translateY(-50%); 
+			}
+
+			/* Animation */
+			.anim-typewriter{
+			  animation: typewriter 4s steps(22) 1s 1 normal both,
+						 blinkTextCursor 500ms steps(22) infinite normal;
+			}
+			@keyframes typewriter{
+			  from{width: 0ch;}
+			  to{width: 17ch;}
+			}
+			@keyframes blinkTextCursor{
+			  from{border-right-color: rgba(255,255,255,.75);}
+			  to{border-right-color: transparent;}
+			}
+			.img-responsive {
+				border-radius: 100px;
+				max-width: 100%;
+				height: auto;
+				display: block;
+			}
+
+			/*********** About Me Section End **********/
+			/******** Aspects Section Start *******/
+			#aspects {
+				background-image: linear-gradient( to left bottom, rgba(54, 10, 136, 0.8), rgba(139, 0, 0, 0.8)), url('images/wildfire/smokey.jpg');
+				background-size: cover;
+				background-position: top;
+				color: #fff;
+				padding-top: 80px;
+				padding-bottom: 100px;
+				position: relative;
+			}
+			/*********Aspects Section End ********/
+			/*********Types Section start ********/
+		   #types {
+				padding-top: 20px;
+				padding-bottom: 40px;
+			    padding-left: 10px;
+			    padding-right: 10px;
+				color: #5a5a5a;
+				background-image: linear-gradient( to left top, rgba(63, 10, 161, 0.8), rgba(139, 0, 0, 0.8)), url('images/wildfire/tree.jpg');
+				background-size: cover;
+				background-position: center;
+				color: #fff;
+			}
+			.textbox1 {
+				  color: #FFF;
+				  font-weight: lighter;
+				  position: relative;
+				  cursor: pointer;
+				  text-align: left;
+			}
+			.textbox1:before{
+			  content: attr(data-text);
+			  position: absolute;
+			}
+			.textbox1:hover:before{
+			  animation: text_effect 5s 1;
+			}
+			@keyframes text_effect{
+			0%{
+				opacity: 1;
+			filter: blur(5px);
+			}
+
+			15%{
+				transform: translateY(-150px);
+				opacity: 1;
+			}
+
+			15%{
+				opacity: 0;
+			}
+
+			100%{
+				opacity: 0;
+			}
+			/**********************text box2********************/
+			.textbox2{
+				  color: #FFF;
+				  font-weight: lighter;
+				  position: relative;
+				  cursor: pointer;
+				 
+			}
+			.textbox2:before{
+			  content: attr(data-text1);
+			  position: absolute;
+			}
+			.textbox2:hover:before{
+			  animation: text_effect 5s 1;
+			}
+			@keyframes text_effect{
+			0%{
+				opacity: 1;
+			filter: blur(5px);
+			}
+
+			15%{
+				transform: translateY(-150px);
+				opacity: 1;
+			}
+
+			15%{
+				opacity: 0;
+			}
+
+			100%{
+				opacity: 0;
+			}
+		/*********** Types Section End***********/
+
+	</style>
+	</head>
+	<body>
+		 <!-- Navbar Section Start-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle collapsed"  type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand active" href="#">WILDFIRE ANALYSIS</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active1"><a href="home.html">HOME</a></li>
+						<li><a href="analysis.html">ANALYSIS</a></li>
+						<li><a href="gallery.html">GALLERY</a></li>
+						<li><a href="about.html">ABOUT US</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Navbar Section End -->
+		
+		
+		<!-- Header Section Start -->
+		<header class="header">
+			<div class="text-box">
+				<h1 class="heading-primary">
+					<span class="heading-primary-main">WILDFIRE ANALYSIS</span>
+					<span class="heading-primary-sub">PREDECTING WILDFIRES AND ASSESSING IT'S EFFECTS </span>
+				</h1>
+			</div>
+		</header>
+		<!-- Header Section End -->
+		
+		<!-- ABOUT SECTION-->
+		<div id="about">
+			<div class="container">
+				<div class="row featurette">
+
+						<h3 class="text1 anim-typewriter">What is wildfire ????</h3>
+						<p>
+							Since time immemorial, forests have been an integral part of human ecosystem. They are nature's greatest bounty to mankind and play a very significant role in its life. Besides providing shelter and protection to a large number of living beings, including pre-historic man, they have been a major source of food, wood and a great variety of other products.<br>
+							Wildfire as its name suggests, is the name of fire that burn forests and vegetation. It can be more specifically classified as bushfire (Seen in Australia mostly), desert fire, forest fire, grass  fire, hill fire, vegetation fire, peat fire, etc. Wildfire seems harmful but is both good and devastating depending on its occurrence and types. Many NGO see wildfire as a new beginning while other see to it as unfortunate and horrifying. </p>
+				 </div>
+			  </div>
+		</div>
+		<!-- ABOUT Section End -->
+		<!-- aspects section-->
+		<div id="aspects">
+			<div class="container">
+				<div class="row">
+   					 <div class="col-lg-6">
+						<h2 align="center">Advantage</h2><hr>
+						 <ul>
+						 	<li>Encourages the plant growth by releasing seeds like that of lodge pole pines.</li>
+							 <li>Cleansing dead tree, leafs and plant for new plants to grow.</li>
+							 <li>Replenishes soil nutrients</li>
+							 <li>Clears disease-ridden crops and herbs, providing nourishment for strong trees</li>
+							 <li>Make space for sunlight, so small plants can get sunlight.</li>
+							 <li>Enhances habitat of wildlife.</li>
+						 </ul>
+					</div>
+    				<div class="col-lg-6">
+						<h2 align="center">Disadvantage</h2><hr>
+						<ul>
+							<li>Burning damaged trees can also damage healthy trees.</li>
+							<li>Depletes soils moisture and damage soil.</li>
+							<li>Severely burned soil can lead to landslide and promote flood.</li>
+							<li>House and buildings near fire are destroyed or damaged.</li>
+							<li>Respiratory disease can be caused due to dense smoke.</li>
+							<li>Air pollution.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Aspects Section End -->
+		<!-- types of wildfire-->
+		<div id="types">
+			<div class="container">
+				<div class="row">
+					 <h2 class="textbox1" data-text="Types Of Wildfire">Types Of Wildfire</h2><hr>
+					<p><u>Forest fire are of three types:</u>
+						<ul>
+							<p>
+							<li> <b>Crown fires (Most devastating):</b> 
+								Crown fire is most unpredictable fires that burn the peak of trees and spread rapidly by wind. In most of the cases these fires are invariably ignited by surface fires. this can be one among the most spectacular kinds of forest fires which usually advance from top to down of trees or shrubs, more or less interdependent of surface fires. In dense conifer stands with a brisk wind, the crown fire may race onward the supporting surface fire . Since it is over the heads of ground force it is uncontrollable until it again drops to the ground, and since it is usually rapidly, it poses grave danger to the fire fighters becoming trapped and burned.
+							</li>
+								</p>
+							<p>
+							<li><b>Surface fires (Lease devastating):</b>{Only dry leaf and leftover are burn in these type of fire.}
+							<br>
+							Surface fire is most common forest fires that burn undergrowth and dead material along the ground of the forest. It is the type of fire that burns surface litter, other loose debris of the forest floor and small vegetation. In general, it is very useful for the forest growth and regeneration. But if grown in size, this fire not only burns ground flora but also results to engulf the undergrowth and also the middle storey of the forest. Surface fires spread by flaming combustion through fuels at or near the surface- grass, dead and down limbs, forest needle and leaf litter, or debris from harvesting or land clearing. this can be the foremost common style of fire in timber stand of all species. it should be a light, low-energy fire in sparse grass and pine needle litter, or it's going to be extremly hot, fast paced fire where slash, flammable under story shrubs or other abundant fuel prevails. A burn up if spread may fritter away to the taller vegetation and tree crowns because it progresses</li></p>
+							<p>
+								<li><b>Ground fires (called underground fires):</b> This type of fire can be mostly seen on winter and summer when leftover crop get dried up and catches fire. Other reasons for this it include urban leftover and plantation when get fire.<br>
+								Ground fires are fed by subterranean roots, duff and other buried organic matter. This fuel type is very liable to ignition because of spotting. These type of fire burn by smoldering, and might burn slowly for days to months, such as peat fires in Kalimantan and Eastern Sumatra, Indonesia, which resulted from a riceland creation project that unintentionally drained and dried the peat.
+								</li>
+							</p>
+							<p>
+								<li><b>Firestrom :</b> The fire spreading most rapidly is the firestorm, which is an intense fire over a swathe . because the fire burns, heat rises and air rushes in, causing the fire to grow. More air makes the fire spin violently somewhat a storm. Flames fly out from the underside and burning ember spew out the peak of the fiery twister, starting smaller fires around it. Temperatures inside these storms can reach around 2,000 degrees Fahrenheit.Along with nature and behavior, the forest fires may also be categorized keep with human management action. On this basis, fires in forest could also be categorized as management ignited fires and prescribed natural fires. Management ignited prescribed fires are ignited so as to meet a land management plan objectives, like debris removal or wildlife habitat improvement. Prescribed natural fires are those who are allowed to burn under an approved plan and preserve the natural role of fires in step with ecosystem. Besides these, the fire may further be categorized based on their peculiar behavior. there's specialized vocabulary utilized by the wild fire community for describing differing kinds of fire behavior.
+								</li>
+							
+							</p>
+							
+						</ul>
+					 </p>
+				 </div>
+			 	<!-- cause of wildfire-->
+				<div class="row">
+				<h2 class="textbox2" align="right" data-text1="Cause Of Wildfire">Cause Of Wildfire</h2><hr>
+				
+					<blockquote><h4><b>1. Human</b></h4></blockquote>
+					In many countries people are the prime causes of Wildfire. More than 95.1% fire in USA are directly are indirectly ignited by humans.
+					<ul>
+						<li><b><u>Burning Debris:</u></b> Cleaning yards by burning them is the most ancient and legal method. Burning particles from these fire are blown away by wind to near forest and starts wildfire.</li>
+						<li><b><u>Unattended Campfires:</u></b> Camping is very popular between many hikers and adventurers. There is a complete list of fire safety rules for camping, which if ignored can cause wildfire.</li>
+						<li><b><u>Equipment Failure or Engine Sparks:</u></b> Many urban forest fire in cases are ignited directly or indirectly by spark plug spark, machine failure, accidents, etc.</li>
+						<li> <b><u>Cigarettes:</u></b> Cigarette and other ignitable narcotics are cause of wildfire as the half burned cigarette buds can act as a spark in igniting dry leaves and hence forest fire.</li>
+						<li><b><u>Fireworks:</u></b> Firecrackers are more common than other causes, because the fire rockets specifically are uncontrollable and can easily get into forest.</li>
+						<li><b><u>Arson:</u></b> Arson is the act of igniting fire on own property, vehicles, or any other thing with the intention to cause damage. This can be done for either forest control or insurance claim. 30% of the wildfire cases are because of Arson.</li>
+					</ul>
+					<blockquote><h4><b>2. Nature</b></h4></blockquote>
+						10% of the wildfire are cause by nature in the USA.
+					<ul>
+						<li><b><u>Lightning:</u></b> The spark produces by lightning during thunderstorm also causes wildfire.</li>
+						<li><b><u>Volcanic Eruption:</u></b> wildfire is also caused my magma from volcanic eruption.</li>
+					</ul>			
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

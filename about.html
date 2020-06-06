@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About us</title>
+   	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<style>
+	  /***************CSS File*************/
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: 'Roboto', sans-serif;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 1.25;
+		}
+	/*********** Navbar Section Start ***********/
+		.navbar-inverse {
+			background-image: -webkit-linear-gradient(bottom left, rgba(100, 121, 916, 0.9), rgba(34, 139, 34, 0.8));
+			background-image: -o-linear-gradient(bottom left, rgba(100, 121, 916, 0.9), rgba(34, 139, 34, 0.8));
+			background-image: linear-gradient(to top right, rgba(100, 121, 916, 0.9), rgba(34, 139, 34, 0.8));
+			}
+
+		.navbar-inverse .navbar-nav>li>a {
+			color: white;
+			font-size: 15px;
+			text-transform: uppercase;
+		}
+
+		.navbar-inverse .navbar-brand {
+			color: white;
+			font-size: 30px;
+		}
+
+		.navbar-inverse ul li:hover {
+			background: rgba(205, 98, 85, 0.8);
+			color: white;
+		}
+		.active1{
+			background: linear-gradient(to right top, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+		}
+	/************ Navbar Section End *************/
+	/************ Header Section Start ************/
+			.header {
+				height: 95vh;
+				background-image: linear-gradient( to right bottom, rgba(63, 10, 161, 0.8), rgba(139, 0, 0, 0.8)), url('images/wildfire/bw.jpg');
+				background-size: cover;
+				background-position: top;
+				position: relative;
+			}
+
+			.text-box {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+			}
+
+			.heading-primary {
+				color: #fff;
+				text-transform: uppercase;
+				backface-visibility: hidden;
+				margin-bottom: 60px;
+			}
+
+			.heading-primary-main {
+				display: block;
+				padding-top: 80px;
+				font-size: 45px;
+				font-weight: 400;
+				letter-spacing: 8px;
+				animation-name: moveFromDown;
+				animation-duration: 1s;
+				animation-timing-function: ease-out;
+			}
+
+			@keyframes moveFromDown {
+				from {transform: translateY(100px);}
+   				to {transform: translateY(0px);}
+			}
+		/*************Navbar Section End*****************/
+		/*************About Develeoper Start*************/
+		.container-fluid{
+			background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+			height: 100%;
+		}
+			.our-team {
+			  padding: 20px 0 30px;
+			  margin-bottom: 70px;
+			  background-color: antiquewhite;
+			  text-align: center;
+			  overflow: hidden;
+			  position: relative;
+			  border-radius: 0% 5% 0% 5%;
+			}
+
+			.our-team .picture {
+			  display: inline-block;
+			  height: 130px;
+			  width: 130px;
+			  margin-bottom: 50px;
+			  z-index: 1;
+			  position: relative;
+			}
+				
+		
+			.our-team .picture::before {
+			  content: "";
+			  width: 100%;
+			  height: 0;
+			  border-radius: 40%;
+			  background-color: #390A0B;
+			  position: absolute;
+			  bottom: 135%;
+			  right: 0;
+			  left: 0;
+			  opacity: 0.9;
+			  transform: scale(3);
+			  transition: all 0.3s linear 0s;
+			}
+
+			.our-team:hover .picture::before {
+			  height: 100%;
+			}
+
+			.our-team .picture::after {
+			  content: "";
+			  width: 100%;
+			  height: 100%;
+			  border-radius: 50%;
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  z-index: -1;
+			}
+
+			.our-team .picture img {
+			  width: 100%;
+			  height: auto;
+			  border-radius: 50%;
+			  transform: scale(1);
+			  transition: all 0.9s ease 0s;
+			}
+
+			.our-team:hover .picture img {
+			  box-shadow: 0 0 0 5px #fff;
+			  transform: scale(0.7);
+			}
+
+			.our-team .title {
+			  display: block;
+			  font-size: 20px;
+			  color: #1B0D3C;
+			  text-transform: capitalize;
+				
+			}
+
+			.our-team .social {
+			  width: 100%;
+			  padding: 0;
+			  margin: 0;
+			  background-color: #390A0B;
+			  position: absolute;
+			  bottom: -100px;
+			  left: 0;
+			  transition: all 0.5s ease 0s;
+			}
+
+			.our-team:hover .social {
+			  bottom: 0;
+			}
+
+			.our-team .social li {
+			  display: inline-block;
+			}
+
+			.our-team .social li a {
+			  display: block;
+			  padding: 10px;
+			  font-size: 17px;
+			  color: white;
+			  transition: all 0.3s ease 0s;
+			  text-decoration: none;
+			}
+
+			.our-team .social li a:hover {
+			  color: #1369ce;
+			  background-color: #f7f5ec;
+			}
+	  </style>
+	  </head>
+  <body>
+	  <!-- Navbar Section Start-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle collapsed"  type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand active" href="#">WILDFIRE ANALYSIS</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="home.html">HOME</a></li>
+						<li><a href="analysis.html">ANALYSIS</a></li>
+						<li><a href="gallery.html">GALLERY</a></li>
+						<li class="active1"><a href="about.html">ABOUT US</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	<!-- Navbar Section End -->
+	<!-- Header Section Start -->
+		<header class="header">
+			<div class="text-box">
+				<h1 class="heading-primary">
+					<span class="heading-primary-main">About Us</span>
+				</h1>
+			</div>
+		</header>
+	<!-- Header Section End -->
+			<div class="container-fluid">
+				<div class="row">
+				<hr><h2 align="center" >Abstract</h2><hr>
+					<p style="padding: 0px 50px 5px 50px;">As the world is increasing focus on climate change issues and mitigation strategies, wildfires are emerging as a frequent source of GHG emission. (E.g. Amazon fires in summer 2019 or Australian bush fires in early 2020). Such events are playing a major role in accelerating the crisis in hand. The project aims to create a wildfire forecasting model based on geological and demographic datasets and quantify its impact on the environment and lives of people based on loss of biomass and proportional increase in respiratory illness in target population.</p>
+					<p style="padding: 0px 50px 20px 50px; ">Different classification algorithms such as neural networks, KNN, SVM, naive byes were used to find the appropriate accuracy of wildfire forecasting model. Also SARIMAX was used for time series analysis to identify the spontaneous combustion temperature. Further this project aims to analyse the driving factors of forest fires and recommend disaster mitigation strategies</p>
+			</div>
+		
+	  <!-- Developer-->
+	  	<hr><h2 align="center">About Developers</h2><hr>
+		  <div class="row">
+			<div class="col-lg-4">
+			  <div class="our-team">
+				<div class="picture">
+				  <img class="img-fluid" src="images/developer/Screenshot (85).png" alt="soumya">
+				</div>
+				<div class="team-content">
+				  <h3 class="name"><b>Soumya</b></h3>
+				  <h4 class="title">Web Developer</h4>
+					
+				</div>
+				<ul class="social">
+				  <li><a href="https://www.facebook.com/soumya.sanjana.22/" class="fa fa-facebook" aria-hidden="true"></a></li>
+				  <li><a href="https://github.com/Soumya9811" class="fa fa-github" ></a></li>
+				  <li><a href="https://www.linkedin.com/in/soumya-9a8a93152/" class="fa fa-linkedin" aria-hidden="true"></a></li>
+				</ul>
+			  </div>
+			</div>
+			<div class="col-lg-4">
+				<div class="our-team">
+				<div class="picture">
+				  <img class="img-fluid" src="images/developer/SAKSHI.PNG" alt="Sakshi">
+				</div>
+				<div class="team-content">
+					<h3 class="name"><b>Sakshi Agarwal</b></h3>
+				  <h4 class="title">Python Developer</h4>
+
+				</div>
+				<ul class="social">
+					<li><a href="https://www.facebook.com/profile.php?id=100005544074464" class="fa fa-facebook" aria-hidden="true"></a></li> 		
+				</ul>
+			</div>
+		</div>
+			<div class="col-lg-4">
+				<div class="our-team">
+				 <div class="picture">
+					 <img class="img-fluid" src="images/developer/Screenshot (83).png" alt="Venkatesh">
+				</div>
+				<div class="team-content">
+					<h3 class="name"><b>Venkatesh Akhouri</b></h3>
+				  <h4 class="title">Python With Data Science</h4>
+				</div>
+				<ul class="social">
+				  <li><a href="https://www.facebook.com/venkatesh.akhouri" class="fa fa-facebook" aria-hidden="true"></a></li>
+				</ul>
+			  </div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!--footer-->
+</body>
+</html>

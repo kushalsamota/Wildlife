@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled Document</title>
+   	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<style>
+	  /***************CSS File*************/
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: 'Roboto', sans-serif;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 1.25;
+		}
+	/*********** Navbar Section Start ***********/
+		.navbar-inverse {
+			background-image: -webkit-linear-gradient(bottom left, rgba(100, 121, 916, 0.9), rgba(34, 139, 34, 0.8));
+			background-image: -o-linear-gradient(bottom left, rgba(100, 121, 916, 0.9), rgba(34, 139, 34, 0.8));
+			background-image: linear-gradient(to top right, rgba(100, 121, 916, 0.9), rgba(34, 139, 34, 0.8));
+			}
+
+		.navbar-inverse .navbar-nav>li>a {
+			color: white;
+			font-size: 15px;
+			text-transform: uppercase;
+		}
+
+		.navbar-inverse .navbar-brand {
+			color: white;
+			font-size: 30px;
+		}
+
+		.navbar-inverse ul li:hover {
+			background: rgba(205, 98, 85, 0.8);
+			color: white;
+		}
+		.active1{
+			background: linear-gradient(to right top, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+		}
+	/************ Navbar Section End *************/
+	/************ Header Section Start ************/
+			.header {
+				height: 95vh;
+				background-image: linear-gradient( 35deg, rgba(63, 10, 161, 0.8), rgba(139, 0, 0, 0.8)), url('images/wildfire/treesmoke.jpg');
+				background-size: cover;
+				background-position: top;
+				position: relative;
+			}
+
+			.text-box {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+			}
+
+			.heading-primary {
+				color: #fff;
+				text-transform: uppercase;
+				backface-visibility: hidden;
+				margin-bottom: 60px;
+			}
+
+			.heading-primary-main {
+				display: block;
+				padding-top: 80px;
+				font-size: 45px;
+				font-weight: 400;
+				letter-spacing: 8px;
+				animation-name: moveFromDown;
+				animation-duration: 1s;
+				animation-timing-function: ease-out;
+			}
+
+			@keyframes moveFromDown {
+				from {transform: translateY(100px);}
+   				to {transform: translateY(0px);}
+			}
+		/************** Header Section End **********/
+		/************** Graph Start *****************/
+			#graph{
+				  height: 100%;
+				 background: linear-gradient(35deg, #3f0aa1 0%, #F07470 30%,#37a0ae 50%, #8b0000 75%);
+					color: aliceblue;
+			}
+			.project {
+    			transition: transform .3s;
+			}
+
+			.project:hover {
+   				 transform: scale(1.1);
+			}
+		/*****************graph end *******************/
+		
+		
+	</style>
+  </head>
+  <body>
+	  <!-- Navbar Section Start-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle collapsed"  type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand active" href="#">WILDFIRE ANALYSIS</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="home.html">HOME</a></li>
+						<li class="active1"><a href="analysis.html">ANALYSIS</a></li>
+						<li><a href="gallery.html">GALLERY</a></li>
+						<li><a href="about.html">ABOUT US</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	<!-- Navbar Section End -->
+	<!-- Header Section Start -->
+		<header class="header">
+			<div class="text-box">
+				<h1 class="heading-primary">
+					<span class="heading-primary-main">ANALYSIS</span>
+				</h1>
+			</div>
+		</header>
+	<!-- Header Section End -->
+	<!-- graph-->
+	  <div class="container-fluid" id="graph">
+		  <h2>Using dataset, we are analysing the post-fire and pre-fire condition.
+It contains the following variables:</h2><hr>
+		  <!--row1 start-->
+		  <div class="row" style="padding-top: 30px; ">
+		  	<div class="col-lg-4">
+				<div class="project thumbnail">
+                        <img src="images/analysis/Picture1.png" alt="Total number of burned and unburned plots.">
+                     </a>
+                 </div>
+			</div>
+			<div class="col-lg-8">
+				<p><h3 align="center">Total number of burned and unburned plots.</h3></p><br><br>
+				This dataset was obtained from official site of Earthdata by NASA. <br>
+				Analysis was done to determine what were the dominant factors that caused fire and what how was the environment effected.
+				There were a total of 247 data points.
+				All the burn occured in same year of 2014.
+			</div>
+		  </div>
+	  	 <!-- row 1 end -->
+		  <!-- row 2 start-->
+		  
+		  <div class="row" style="padding-top: 30px; ">
+		  	<div class="col-lg-8">
+				<p></p><h3 align="center">Distribution of pima and piba(species of trees), at burned and unburned plots</h3></p><br><br>
+			  	<p>
+			  	The above graph shows the distribution of pima and piba(species of trees), at burned and unburned plots.</p>
+				<p>We see that at unburned plots the area of both the species is same but in burn plots, the burnt area of pima is larger than piba.</p>
+				<p>A semi conclusive statement can be made that pima may be responsible for wildfires.</p>
+			</div>
+			
+			<div class="col-lg-4">
+				<div class="project thumbnail">
+                     <img src="images/analysis/Picture2.png" alt="Distribution of pima and piba(species of trees), at burned and unburned plots">
+                     </a>
+                 </div>
+			</div>
+		  </div>
+		  <!-- row 2 end-->
+		   <!--row 3  end-->
+			<hr><h2 align="center"> Finding correlation between ecoregion and moisture class</h2><hr>
+				 Ecoregion and moisture class were two categorical columns in the dataset and the correlation between these two variables were obtained by using Pearson’s Chi Squared Test.<br>The p-value obtained was 0.002 and assuming that if p value was lass than 0.5,null hypothesis will be rejected and hence alternate hypothesis was accepted, i.e relation exist between these two variables.
+			
+		  <div class="row" style="padding-top: 30px; ">
+			  <hr><h3 align="center">ANALYSIS OF COMBUSTION OF BIOMASS</h3><hr>
+		  	<div class="col-lg-6">
+				<h4 align="center"><u>Percent combustion of bio mass</u></h4>
+				<div class="project thumbnail">
+					 <img src= "images/analysis/Picture3.png" alt="">
+                </div>
+				<p>The above figure shows the percent combustion of biomass(dry matter), according to moisture class.</p>
+				Two inferences can be made from above graph:<br>
+				1) Our initial assumption that xeric moisture class facilitates burn was wrong and we have to take more variables into account.<br>
+				2) Xeric moisture facilitates burns,but not combustion of bio mass, and we should see the situation in case of carbon combustion.<br>
+			</div>
+			<div class="col-lg-6">
+				<h4 align="center"><u>Distribution of pima and piba according to moisture class</u></h4>
+				<div class="project thumbnail">
+					 <img src= "images/analysis/Picture4.png" alt="">
+                </div>
+				<p>Following inferences can be made:</p>
+					1)Xeric has lowest combustion percentage and xeric has a high distribution of piba.So Piba repells the fires.<br>
+					2)Mesic-subhygenic has a highest combustion percetage and also it has a high distribution of pima, so pima still is responsible for wildfires.<br>
+					3)We can plant pima in xeric regions.<br>
+			</div>
+		</div>
+	  	 <!-- row 3 end -->
+		  <!--row4 start-->
+		  <div class="row" style="padding-top: 30px; ">
+			  <hr><h3 align="center">ANALYSIS OF COMBUSTION OF CARBON</h3><hr>
+		  	<div class="col-lg-6">
+				<h4 align="center"><u>percentage combustion of carbon</u></h4>
+				<div class="project thumbnail">
+                      <img src="images/analysis/Picture5.png" alt="">
+                </div>
+				<P>No inference can be made from above graph as the corbon combusted is same for all moisture class except xeric class which have a low combustion percentage.</p>
+				<p>Carbon is an important component of soil. When wildfires occur the land becomes barren and no vegetation can be planted in that area.</P>
+			</div>
+			<div class="col-lg-6">
+				<h4 align="center"><u>Percentage of carbon combustion in soil</u></h4>
+				<div class="project thumbnail">
+                    <img src="images/analysis/Picture6.png" alt="">
+                    
+                 </div>
+				It can be seen that regions where there is subxeric class of moisture have a very high percentage of carbon combustion.
+			</div>
+			
+		  </div>
+	  	 <!-- row 4 end -->
+		<h4 align="center"><b><u>RECOMMENDATIONS BASED ON ABOVE TWO ANALYSIS</u></b></h4>
+			<ol style="padding-left:40px; ">
+				<li>Pima might be responsible for wildfires.</li>
+				<li>Plantation must be done in regions having xeric moisture class as they have alow combustion percentage,primarily piba should be planted.</li>
+				<li>Special measures must be taken in subxeric moisture class regions as they have a very high carbon combustion percentage in soil which can leave the land barren.</li>
+			</ol>
+	  </div>
+	
+	  
+  </body>
+</html>
